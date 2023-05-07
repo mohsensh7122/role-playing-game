@@ -1,14 +1,31 @@
-const heroID = "hero";
-const heroName = "Wizard";
-const heroAvatar = "images/wizard.png";
-const heroHealth = 60;
-const heroScore = 6;
+/*
+CHALLENGE
+1. Strip out the hero and monster data (element id, name, avatar, 
+health and dice score) and store them in variables
 
-const monsterID = "monster";
-const monsterName = "Orc";
-const monsterAvatar = "images/orc.png";
-const monsterHealth = 10;
-const monsterScore = 4;
+2. Write a renderCharacter() function that accepts the 5 new variables 
+as paramaters and renders out a character with this data
+
+3. Call renderCharacter() twice. Once with the hero variables and 
+once with the monster variables to that both are rendered
+*/
+
+const hero = {
+   elementId: "hero",
+   name: "Wizard",
+   avatar: "images/wizard.png",
+   health: 60,
+   score: 6
+}
+
+const monster = {
+   elementId: "monster",
+   name: "Orc",
+   avatar: "images/orc.png",
+   health: 10,
+   score: 4
+}
+
 
 
 function renderCharacter(elementId, name, avatar, health, score) {
