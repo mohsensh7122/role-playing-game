@@ -28,6 +28,15 @@ function renderCharacter(data) {
       diceCount
    } = data;
 
+
+   function getDiceRollArray(diceCount){
+      const newDiceRolls = []
+      for(let i = 0; i < diceCount; i++){
+          newDiceRolls.push(Math.floor(Math.random()*6) +1)
+      }
+      return newDiceRolls
+  }
+  
    const diceHtml = diceRoll.map(function(num){
       return `<div class="dice">${num}</div>`
   }).join('')
