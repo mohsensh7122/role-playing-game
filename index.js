@@ -4,6 +4,12 @@ function getDiceRollArray(diceCount){
   })
 }
 
+function getDiceHtml(diceCount) {
+   return getDiceRollArray(diceCount).map(function (num) {
+       return `<div class="dice">${num}</div>`
+   }).join('')
+}
+
 const hero = {
    elementId: "hero",
    name: "Wizard",
@@ -21,7 +27,7 @@ const monster = {
 }
 
 
-function Character(){
+function Character(data){
    this.elementId = data.elementId;
    this.name = data.name;
    this.avatar = data.avatar;
@@ -43,3 +49,9 @@ function Character(){
       </div>`;
    }
 }
+
+const wizard = new Character(hero);
+const orc = new Character(monster);
+
+wizard.getCharacterHtml();
+orc.getCharacterHtml();
