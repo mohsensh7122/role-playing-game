@@ -41,35 +41,5 @@ function Character(){
               ${diceHtml}
           </div>
       </div>`;
+   }
 }
-
-function renderCharacter(data) {
-   const {
-      elementId,
-      name,
-      avatar,
-      health,
-      diceRoll,
-      diceCount
-   } = data;
-
-   function getDiceHtml(diceCount){
-      return getDiceRollArray(diceCount).map(diceroll => {
-          return `<div class="dice">${diceroll}</div>`
-      }).join('')
-  }
-   
-
-   const diceHtml = getDiceHtml(diceCount);
-
-   document.getElementById(elementId).innerHTML = `<div class="character-card">
-   <h4 class="name"> ${name} </h4>
-   <img class="avatar" src="${avatar}"/>
-   <p class="health">health: <b> ${health} </b></p>
-   <div class="dice-container">
-      ${diceHtml}
-   </div>
-   </div>`;
-}
-
-
