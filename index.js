@@ -21,6 +21,13 @@ const monster = {
 }
 
 
+function Character(){
+   this.elementId = data.elementId;
+   this.name = data.name;
+   this.avatar = data.avatar;
+   this.health = data.health;
+   this.diceCount = data.diceCount;
+}
 
 function renderCharacter(data) {
    const {
